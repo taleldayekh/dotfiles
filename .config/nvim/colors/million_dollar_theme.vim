@@ -13,16 +13,22 @@ if exists('syntax_on')
 endif
 
 "Color variables
+let blue_light='#87cada'
+let blue_medium='#469bca'
+let green_light='#a2e9c1'
+let green_medium='#57bf86'
+let orange_light='#f9dd9a'
+let orange_medium='#e7926f'
+let pink_light='#ecab99'
+let purple_light='#a9c4fa'
+let red_light='#eb7466'
+let white_light='#c9e5ea'
+
 let white_1='#c9e5ea'
 let gray_1='#6a6a6a'
 let gray_2='#2d4043'
 let green_1='#57bf86'
-let orange_1='#e7926f'
-let orange_2='#f9dd9a'
 let blue_2='#102427'
-let red_1='#eb7466'
-let red_2='2c141d'
-let purple_1='#87cada'
 
 "nvim
 :exe 'hi Normal'			'guifg='.white_1
@@ -37,11 +43,32 @@ let purple_1='#87cada'
 :exe 'hi markdownOrderedListMarker'	'guifg='.green_1
 
 "TypeScript
+:exe 'hi typescriptImport'		'guifg='.blue_light
+:exe 'hi typescriptExport'		'guifg='.blue_light
+:exe 'hi typescriptGlobal'		'guifg='.pink_light
+:exe 'hi typescriptString'		'guifg='.green_medium
+:exe 'hi typescriptBraces'		'guifg='.orange_medium
+:exe 'hi typescriptParens'		'guifg='.orange_medium
+:exe 'hi typescriptVariable'		'guifg='.red_light
+:exe 'hi typescriptVariableDeclaration' 'guifg='.orange_light	'gui=italic'
+:exe 'hi typescriptObjectLabel'		'guifg='.white_light
+:exe 'hi typescriptArrowFunc'		'guifg='.orange_medium
+:exe 'hi typescriptFuncCallArg'		'guifg='.white_light
+:exe 'hi typescriptCall'		'guifg='.white_light
+:exe 'hi typescriptConsoleMethod'	'guifg='.blue_medium
+:exe 'hi typescriptCacheMethod'		'guifg='.blue_medium
+:exe 'hi typescriptObjectStaticMethod'	'guifg='.blue_medium
+:exe 'hi typescriptBOMLocationMethod'	'guifg='.blue_medium
+:exe 'hi typescriptArrayMethod'		'guifg='.blue_medium
+:exe 'hi typescriptRegexpString'	'guifg='.purple_light
+:exe 'hi typescriptConditional'		'guifg='.green_light
+:exe 'hi typescriptStatementKeyword'	'guifg='.pink_light
+
+
+"
+"
+"
+"
+"
 :exe 'hi typescriptComment'		'guifg='.gray_2
 :exe 'hi typescriptLineComment'		'guifg='.gray_2
-:exe 'hi typescriptImport'		'guifg='.orange_1
-:exe 'hi typescriptExport'		'guifg='.orange_1
-:exe 'hi typescriptBraces'		'guifg='.orange_2
-:exe 'hi typescriptString'		'guifg='.green_1
-:exe 'hi typescriptVariable'		'guifg=#709af7'
-:exe 'hi typescriptVariableDeclaration'	'guifg='.purple_1	'gui=italic'
