@@ -1,16 +1,50 @@
 "Vim color theme
 "Maintainer: Talel Dayekh
 "
-"The theme is designed for use with iTerm which supports true color
-"in the terminal and therefore highlightings are set for gui only.
+"This theme is designed for use with iTerm which supports true color
+"in the terminal, therefore highlights are set for gui only.
 
-hi clear
+highlight clear
 set background=dark
 let colors_name='million_dollar_theme'
 
-if exists('syntax_on')
+if exists('syntax-on')
   syntax reset
 endif
+
+"Color variables
+let green_light='#d4e9ad'
+let orange='#e7926f'
+let purple='#9783eb'
+let red_light='#eb7466'
+let red_medium='#c35955'
+let red_dark='#2c141d'
+let teal='#1f4b53'
+let white='#c9e5ea'
+
+"TypeScript
+execute 'highlight typescriptComment'			'guifg='.teal
+execute 'highlight typescriptLineComment'		'guifg='.teal
+execute 'highlight typescriptCommentTodo'		'guifg='.red_medium	'guibg='.red_dark
+execute 'highlight typescriptEndColons'			'guifg='.white
+execute 'highlight typescriptCall'			'guifg='.white
+execute 'highlight typescriptArrowFunc'			'guifg='.orange
+execute 'highlight typescriptInterfaceKeyword'		'guifg='.purple
+execute 'highlight typescriptInterfaceName'		'guifg='.purple
+execute 'highlight typescriptTypeReference'		'guifg='.purple
+execute 'highlight typescriptPredefinedType'		'guifg='.purple
+execute 'highlight typescriptMember'			'guifg='.white
+execute 'highlight typescriptProperty'			'guifg='.orange
+execute 'highlight typescriptParens'			'guifg='.orange
+execute 'highlight typescriptBraces'			'guifg='.orange
+execute 'highlight typescriptVariable'			'guifg='.red_light
+execute 'highlight typescriptVariableDeclaration'	'guifg='.green_light	'gui=italic'
+execute 'highlight typescriptKeywordOp'			'guifg='
+
+
+
+
+
 
 "Color variables
 let blue_light='#87cada'
@@ -31,44 +65,35 @@ let green_1='#57bf86'
 let blue_2='#102427'
 
 "nvim
-:exe 'hi Normal'			'guifg='.white_1
-:exe 'hi StatusLine'			'guifg='.blue_2		'guibg='.green_1
-:exe 'hi NonText'			'guifg='.gray_1
+:execute 'highlight Normal'			'guifg='.white_1
+:execute 'highlight StatusLine'			'guifg='.blue_2		'guibg='.green_1
+:execute 'highlight NonText'			'guifg='.gray_1
 
 "Markdown
-:exe 'hi markdownHeadingDelimiter'	'guifg='.green_1
-:exe 'hi markdownH1'			'guifg='.green_1
-:exe 'hi markdownH2'			'guifg='.green_1
-:exe 'hi markdownListMarker'		'guifg='.green_1
-:exe 'hi markdownOrderedListMarker'	'guifg='.green_1
+execute 'highlight markdownHeadingDelimiter'	'guifg='.green_1
+execute 'highlight markdownH1'			'guifg='.green_1
+execute 'highlight markdownH2'			'guifg='.green_1
+execute 'highlight markdownListMarker'		'guifg='.green_1
+execute 'highlight markdownOrderedListMarker'	'guifg='.green_1
 
 "TypeScript
-:exe 'hi typescriptImport'		'guifg='.blue_light
-:exe 'hi typescriptExport'		'guifg='.blue_light
-:exe 'hi typescriptGlobal'		'guifg='.pink_light
-:exe 'hi typescriptString'		'guifg='.green_medium
-:exe 'hi typescriptBraces'		'guifg='.orange_medium
-:exe 'hi typescriptParens'		'guifg='.orange_medium
-:exe 'hi typescriptVariable'		'guifg='.red_light
-:exe 'hi typescriptVariableDeclaration' 'guifg='.orange_light	'gui=italic'
-:exe 'hi typescriptObjectLabel'		'guifg='.white_light
-:exe 'hi typescriptArrowFunc'		'guifg='.orange_medium
-:exe 'hi typescriptFuncCallArg'		'guifg='.white_light
-:exe 'hi typescriptCall'		'guifg='.white_light
-:exe 'hi typescriptConsoleMethod'	'guifg='.blue_medium
-:exe 'hi typescriptCacheMethod'		'guifg='.blue_medium
-:exe 'hi typescriptObjectStaticMethod'	'guifg='.blue_medium
-:exe 'hi typescriptBOMLocationMethod'	'guifg='.blue_medium
-:exe 'hi typescriptArrayMethod'		'guifg='.blue_medium
-:exe 'hi typescriptRegexpString'	'guifg='.purple_light
-:exe 'hi typescriptConditional'		'guifg='.green_light
-:exe 'hi typescriptStatementKeyword'	'guifg='.pink_light
-
-
-"
-"
-"
-"
-"
-:exe 'hi typescriptComment'		'guifg='.gray_2
-:exe 'hi typescriptLineComment'		'guifg='.gray_2
+execute 'highlight typescriptImport'		'guifg='.blue_light
+execute 'highlight typescriptExport'		'guifg='.blue_light
+execute 'highlight typescriptGlobal'		'guifg='.pink_light
+execute 'highlight typescriptString'		'guifg='.green_medium
+"execute 'highlight typescriptBraces'		'guifg='.orange_medium
+"execute 'highlight typescriptParens'		'guifg='.orange_medium
+"execute 'highlight typescriptVariable'		'guifg='.red_light
+"execute 'highlight typescriptVariableDeclaration' 'guifg='.orange_light	'gui=italic'
+execute 'highlight typescriptObjectLabel'		'guifg='.white_light
+"execute 'highlight typescriptArrowFunc'		'guifg='.orange_medium
+execute 'highlight typescriptFuncCallArg'		'guifg='.white_light
+"execute 'highlight typescriptCall'		'guifg='.white_light
+execute 'highlight typescriptConsoleMethod'	'guifg='.blue_medium
+execute 'highlight typescriptCacheMethod'		'guifg='.blue_medium
+execute 'highlight typescriptObjectStaticMethod'	'guifg='.blue_medium
+execute 'highlight typescriptBOMLocationMethod'	'guifg='.blue_medium
+execute 'highlight typescriptArrayMethod'		'guifg='.blue_medium
+execute 'highlight typescriptRegexpString'	'guifg='.purple_light
+execute 'highlight typescriptConditional'		'guifg='.green_light
+execute 'highlight typescriptStatementKeyword'	'guifg='.pink_light
