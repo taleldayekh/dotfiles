@@ -13,33 +13,59 @@ if exists('syntax-on')
 endif
 
 "Color variables
+let blue_light='#469bca'
+let blue_medium='#709af7'
 let green_light='#d4e9ad'
+let green_medium='#57bf86'
 let orange='#e7926f'
+let pink='#f8bbd0'
 let purple='#9783eb'
 let red_light='#eb7466'
 let red_medium='#c35955'
 let red_dark='#2c141d'
-let teal='#1f4b53'
+let teal_light='#377d8c'
+let teal_dark='#1f4b53'
 let white='#c9e5ea'
 
+"nvim
+execute 'highlight lineNr'				'guifg='.teal_dark
+execute 'highlight CursorLineNr'			'guifg='.teal_light
+execute 'highlight CursorLine'				'guibg=#102427'
+
 "TypeScript
-execute 'highlight typescriptComment'			'guifg='.teal
-execute 'highlight typescriptLineComment'		'guifg='.teal
+execute 'highlight typescriptComment'			'guifg='.teal_light
+execute 'highlight typescriptLineComment'		'guifg='.teal_light
 execute 'highlight typescriptCommentTodo'		'guifg='.red_medium	'guibg='.red_dark
-execute 'highlight typescriptEndColons'			'guifg='.white
-execute 'highlight typescriptCall'			'guifg='.white
 execute 'highlight typescriptArrowFunc'			'guifg='.orange
+execute 'highlight typescriptParens'			'guifg='.orange
+execute 'highlight typescriptBraces'			'guifg='.orange
+execute 'highlight typescriptVariable'			'guifg='.orange
 execute 'highlight typescriptInterfaceKeyword'		'guifg='.purple
 execute 'highlight typescriptInterfaceName'		'guifg='.purple
 execute 'highlight typescriptTypeReference'		'guifg='.purple
 execute 'highlight typescriptPredefinedType'		'guifg='.purple
+execute 'highlight typescriptOperator'			'guifg='.purple
+execute 'highlight typescriptKeywordOp'			'guifg='.purple
+execute 'highlight typescriptProperty'			'guifg='.white
 execute 'highlight typescriptMember'			'guifg='.white
-execute 'highlight typescriptProperty'			'guifg='.orange
-execute 'highlight typescriptParens'			'guifg='.orange
-execute 'highlight typescriptBraces'			'guifg='.orange
-execute 'highlight typescriptVariable'			'guifg='.red_light
+execute 'highlight typescriptFuncCallArg'		'guifg='.white
+execute 'highlight typescriptConditionalParen'		'guifg='.white
+execute 'highlight typescriptFuncComma'			'guifg='.white
+execute 'highlight typescriptObjectSpread'		'guifg='.white
+execute 'highlight typescriptCall'			'guifg='.white
+execute 'highlight typescriptEndColons'			'guifg='.white
+execute 'highlight typescriptGlobal'			'guifg='.blue_medium
+execute 'highlight typescriptObjectStaticMethod'	'guifg='.blue_light
+execute 'highlight typescriptArrayMethod'		'guifg='.blue_light
+execute 'highlight typescriptBOMLocationMethod'		'guifg='.blue_light
+execute 'highlight typescriptConditional'		'guifg='.pink
+execute 'highlight typescriptBinaryOp'			'guifg='.pink
+execute 'highlight typescriptStatementKeyword'		'guifg='.pink
+execute 'highlight typescriptRegexpString'		'guifg='.pink
+execute 'highlight typescriptUnaryOp'			'guifg='.pink
 execute 'highlight typescriptVariableDeclaration'	'guifg='.green_light	'gui=italic'
-execute 'highlight typescriptKeywordOp'			'guifg='
+execute 'highlight typescriptString'			'guifg='.green_medium
+execute 'highlight typescriptNumber'			'guifg='.green_medium
 
 
 
@@ -79,21 +105,21 @@ execute 'highlight markdownOrderedListMarker'	'guifg='.green_1
 "TypeScript
 execute 'highlight typescriptImport'		'guifg='.blue_light
 execute 'highlight typescriptExport'		'guifg='.blue_light
-execute 'highlight typescriptGlobal'		'guifg='.pink_light
-execute 'highlight typescriptString'		'guifg='.green_medium
+"execute 'highlight typescriptGlobal'		'guifg='.pink_light
+"execute 'highlight typescriptString'		'guifg='.green_medium
 "execute 'highlight typescriptBraces'		'guifg='.orange_medium
 "execute 'highlight typescriptParens'		'guifg='.orange_medium
 "execute 'highlight typescriptVariable'		'guifg='.red_light
 "execute 'highlight typescriptVariableDeclaration' 'guifg='.orange_light	'gui=italic'
 execute 'highlight typescriptObjectLabel'		'guifg='.white_light
 "execute 'highlight typescriptArrowFunc'		'guifg='.orange_medium
-execute 'highlight typescriptFuncCallArg'		'guifg='.white_light
+"execute 'highlight typescriptFuncCallArg'		'guifg='.white_light
 "execute 'highlight typescriptCall'		'guifg='.white_light
 execute 'highlight typescriptConsoleMethod'	'guifg='.blue_medium
 execute 'highlight typescriptCacheMethod'		'guifg='.blue_medium
-execute 'highlight typescriptObjectStaticMethod'	'guifg='.blue_medium
-execute 'highlight typescriptBOMLocationMethod'	'guifg='.blue_medium
-execute 'highlight typescriptArrayMethod'		'guifg='.blue_medium
-execute 'highlight typescriptRegexpString'	'guifg='.purple_light
-execute 'highlight typescriptConditional'		'guifg='.green_light
-execute 'highlight typescriptStatementKeyword'	'guifg='.pink_light
+"execute 'highlight typescriptObjectStaticMethod'	'guifg='.blue_medium
+"execute 'highlight typescriptBOMLocationMethod'	'guifg='.blue_medium
+"execute 'highlight typescriptArrayMethod'		'guifg='.blue_medium
+"execute 'highlight typescriptRegexpString'	'guifg='.purple_light
+"execute 'highlight typescriptConditional'		'guifg='.green_light
+"execute 'highlight typescriptStatementKeyword'	'guifg='.pink_light
