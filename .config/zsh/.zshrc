@@ -10,4 +10,5 @@ autoload -U compinit
 compinit -d $HOME/.zsh_completion
 
 # Execute aliases
-. $HOME/GoogleDrive/MacBook/dotfiles/.config/zsh/aliases.zsh
+source $HOME/GoogleDrive/MacBook/dotfiles/.config/zsh/aliases.zsh
+
