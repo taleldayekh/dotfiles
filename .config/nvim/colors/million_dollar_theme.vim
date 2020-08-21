@@ -25,27 +25,42 @@ let red_medium='#c35955'
 let red_dark='#2c141d'
 let teal_light='#377d8c'
 let teal_dark='#1f4b53'
-let white='#c9e5ea'
+let white='#fefefe'
 
 "nvim
+execute 'highlight Normal'				'guifg='.white
 execute 'highlight lineNr'				'guifg='.teal_dark
 execute 'highlight CursorLineNr'			'guifg='.teal_light
 execute 'highlight CursorLine'				'guibg=#102427'
 
+"Markdown
+
 "TypeScript
-execute 'highlight typescriptComment'			'guifg='.teal_light
-execute 'highlight typescriptLineComment'		'guifg='.teal_light
-execute 'highlight typescriptCommentTodo'		'guifg='.red_medium	'guibg='.red_dark
+execute 'highlight typescriptObjectStaticMethod'	'guifg='.blue_light
+execute 'highlight typescriptArrayMethod'		'guifg='.blue_light
+execute 'highlight typescriptBOMLocationMethod'		'guifg='.blue_light
+execute 'highlight typescriptGlobal'			'guifg='.blue_medium
+execute 'highlight typescriptVariableDeclaration'	'guifg='.green_light	'gui=italic'
+execute 'highlight typescriptString'			'guifg='.green_medium
+execute 'highlight typescriptNumber'			'guifg='.green_medium
 execute 'highlight typescriptArrowFunc'			'guifg='.orange
 execute 'highlight typescriptParens'			'guifg='.orange
 execute 'highlight typescriptBraces'			'guifg='.orange
 execute 'highlight typescriptVariable'			'guifg='.orange
+execute 'highlight typescriptConditional'		'guifg='.pink
+execute 'highlight typescriptBinaryOp'			'guifg='.pink
+execute 'highlight typescriptStatementKeyword'		'guifg='.pink
+execute 'highlight typescriptRegexpString'		'guifg='.pink
+execute 'highlight typescriptUnaryOp'			'guifg='.pink
 execute 'highlight typescriptInterfaceKeyword'		'guifg='.purple
 execute 'highlight typescriptInterfaceName'		'guifg='.purple
 execute 'highlight typescriptTypeReference'		'guifg='.purple
 execute 'highlight typescriptPredefinedType'		'guifg='.purple
 execute 'highlight typescriptOperator'			'guifg='.purple
 execute 'highlight typescriptKeywordOp'			'guifg='.purple
+execute 'highlight typescriptCommentTodo'		'guifg='.red_medium	'guibg='.red_dark
+execute 'highlight typescriptComment'			'guifg='.teal_light
+execute 'highlight typescriptLineComment'		'guifg='.teal_light
 execute 'highlight typescriptProperty'			'guifg='.white
 execute 'highlight typescriptMember'			'guifg='.white
 execute 'highlight typescriptFuncCallArg'		'guifg='.white
@@ -54,18 +69,6 @@ execute 'highlight typescriptFuncComma'			'guifg='.white
 execute 'highlight typescriptObjectSpread'		'guifg='.white
 execute 'highlight typescriptCall'			'guifg='.white
 execute 'highlight typescriptEndColons'			'guifg='.white
-execute 'highlight typescriptGlobal'			'guifg='.blue_medium
-execute 'highlight typescriptObjectStaticMethod'	'guifg='.blue_light
-execute 'highlight typescriptArrayMethod'		'guifg='.blue_light
-execute 'highlight typescriptBOMLocationMethod'		'guifg='.blue_light
-execute 'highlight typescriptConditional'		'guifg='.pink
-execute 'highlight typescriptBinaryOp'			'guifg='.pink
-execute 'highlight typescriptStatementKeyword'		'guifg='.pink
-execute 'highlight typescriptRegexpString'		'guifg='.pink
-execute 'highlight typescriptUnaryOp'			'guifg='.pink
-execute 'highlight typescriptVariableDeclaration'	'guifg='.green_light	'gui=italic'
-execute 'highlight typescriptString'			'guifg='.green_medium
-execute 'highlight typescriptNumber'			'guifg='.green_medium
 
 
 
@@ -91,7 +94,7 @@ let green_1='#57bf86'
 let blue_2='#102427'
 
 "nvim
-:execute 'highlight Normal'			'guifg='.white_1
+":execute 'highlight Normal'			'guifg='.white_1
 :execute 'highlight StatusLine'			'guifg='.blue_2		'guibg='.green_1
 :execute 'highlight NonText'			'guifg='.gray_1
 
