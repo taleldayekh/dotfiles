@@ -72,7 +72,7 @@ execute 'highlight typescriptEndColons'			'guifg='.white
 
 
 
-
+execute 'highlight LspDiagnosticsError'			'guifg='.red_medium
 
 
 "Color variables
