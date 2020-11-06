@@ -17,11 +17,11 @@ set complete
 
 "Language Server Protocol
 lua require'nvim_lsp'.tsserver.setup{}
+lua require'nvim_lsp'.pyls.setup{}
 
 
 
-
-
+"-------------------------
 set colorcolumn=80
 "Don't spam with keywords
 set shortmess+=c
