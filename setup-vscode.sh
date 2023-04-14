@@ -9,6 +9,8 @@ code --install-extension aaron-bond.better-comments
 code --install-extension streetsidesoftware.code-spell-checker
 
 # Code
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension esbenp.prettier-vscode
 code --install-extension hashicorp.terraform
 code --install-extension ms-python.python
 code --install-extension rangav.vscode-thunder-client
