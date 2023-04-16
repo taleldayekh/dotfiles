@@ -12,6 +12,7 @@ brew install pyenv
 # Install macOS Applications
 brew install --cask brave-browser
 brew install --cask docker
+brew install --cask google-drive
 brew install --cask visual-studio-code
 
 # Fonts
