@@ -13,6 +13,7 @@ brew install pyenv
 brew install --cask brave-browser
 brew install --cask docker
 brew install --cask google-drive
+brew install --cask pgadmin4
 brew install --cask visual-studio-code
 
 # Fonts
