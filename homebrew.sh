@@ -5,9 +5,11 @@
 brew analytics off
 
 # Install Brew Packages
+brew install awscli
 brew install pipenv
 brew install postgresql@14
 brew install pyenv
+brew install terraform
 
 # Install macOS Applications
 brew install --cask brave-browser
