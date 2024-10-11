@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: nas-postgres
+    environment:
+      POSTGRES_USER: <user in password manager>
+      POSTGRES_PASSWORD: <password in password manager>
+      POSTGRES_DB: default
+    volumes:
+      - /volume2/docker/postgres-pgadmin/postgres-data:/var/lib/postgresql/data
+    ports:
+      # The default PostgreSQL port is already in use by the Synology NAS.
+      - "5433:5432"
+    restart: always
+  
+  pgadmin:
+    image: dpage/pgadmin4:8.10
+    container_name: nas-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: <email in password manager>
+      PGADMIN_DEFAULT_PASSWORD: <password in password manager>
+    volumes:
+      - /volume2/docker/postgres-pgadmin/pgadmin-data:/var/lib/pgadmin
+    ports:
+      # Port 80 is reserved for HTTP.
+      - "8081:80"
+    depends_on:
+      - postgres
+    restart: always
